@@ -92,6 +92,17 @@ function M.setup(colors, config)
     end
     M.colors                              = colors or base16_colorscheme or
         M.colorschemes['schemer-dark']
+    if vim.o.background == 'light' then
+        M.colors.base01 = 252
+        M.colors.base02 = 250
+        M.colors.cterm01 = 252
+        M.colors.cterm02 = 250
+    else
+        M.colors.base01 = 236
+        M.colors.base02 = 238
+        M.colors.cterm01 = 236
+        M.colors.cterm02 = 238
+    end
     local hi                              = M.highlight
 
     -- Vim editor colors
@@ -627,21 +638,21 @@ setmetatable(M.colorschemes, {
 
 -- Default ANSI colorscheme mapping
 M.colorschemes['schemer-dark'] = {
-    base00 = 0, base01 = 8, base02 = 8, base03 = 8,
+    base00 = 0, base01 = 236, base02 = 238, base03 = 8,
     base04 = 7, base05 = 15, base06 = 7, base07 = 15,
     base08 = 1, base09 = 3, base0A = 3, base0B = 2,
     base0C = 6, base0D = 4, base0E = 5, base0F = 8,
-    cterm00 = 0, cterm01 = 8, cterm02 = 8, cterm03 = 8,
+    cterm00 = 0, cterm01 = 236, cterm02 = 238, cterm03 = 8,
     cterm04 = 7, cterm05 = 15, cterm06 = 7, cterm07 = 15,
     cterm08 = 1, cterm09 = 3, cterm0A = 3, cterm0B = 2,
     cterm0C = 6, cterm0D = 4, cterm0E = 5, cterm0F = 8,
 }
 M.colorschemes['schemer-medium'] = {
-    base00 = 0, base01 = 8, base02 = 8, base03 = 8,
+    base00 = 0, base01 = 236, base02 = 238, base03 = 8,
     base04 = 7, base05 = 15, base06 = 7, base07 = 15,
     base08 = 1, base09 = 3, base0A = 3, base0B = 2,
     base0C = 6, base0D = 4, base0E = 5, base0F = 8,
-    cterm00 = 0, cterm01 = 8, cterm02 = 8, cterm03 = 8,
+    cterm00 = 0, cterm01 = 236, cterm02 = 238, cterm03 = 8,
     cterm04 = 7, cterm05 = 15, cterm06 = 7, cterm07 = 15,
     cterm08 = 1, cterm09 = 3, cterm0A = 3, cterm0B = 2,
     cterm0C = 6, cterm0D = 4, cterm0E = 5, cterm0F = 8,
